@@ -268,7 +268,6 @@ public class HelloController implements Initializable{
                 Platform.runLater(() -> searchField.setDisable(false));
             }
         }, 200);*/
-
     }
 
         void saveMessageToDB(){
