@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fx_my_messenger.HelloController">
+    <children>
+        <Pane fx:id="infoPane" prefHeight="730.0" prefWidth="200.0" styleClass="info-pane" stylesheets="@style.css">
+            <children>
+                <Circle fill="WHITE" layoutX="100.0" layoutY="90.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Circle>
+                <ImageView fx:id="imgV" fitHeight="70.0" fitWidth="70.0" layoutX="65.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+                <Label fx:id="lbl" alignment="CENTER" layoutY="151.0" prefHeight="31.0" prefWidth="200.0" styleClass="name-label">
+                    <font>
+                        <Font name="System Bold" size="21.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Label>
+                <HBox layoutY="233.0" prefHeight="50.0" prefWidth="200.0">
+                    <children>
+                        <FontAwesomeIconView fx:id="home" glyphName="USER" size="45" wrappingWidth="24.0">
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="profile" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#activateTopPane" prefHeight="50.0" prefWidth="178.0" text="Profile" textAlignment="CENTER" textFill="#80e0f2">
+                            <font>
+                                <Font size="27.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.3803921639919281" green="0.8392156958580017" blue="0.30980393290519714" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <styleClass>
+                        <String fx:value="info-pane-btn" />
+                        <String fx:value="radius" />
+                    </styleClass>
+                </HBox>
+                <HBox layoutY="305.0" prefHeight="50.0" prefWidth="200.0">
+                    <children>
+                        <FontAwesomeIconView fx:id="mail" glyphName="ENVELOPE" size="40" wrappingWidth="24.0">
+                            <HBox.margin>
+                                <Insets left="10.0" top="3.0" />
+                            </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label fx:id="chat" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#activateChat" prefHeight="50.0" prefWidth="178.0" text="Chat" textAlignment="CENTER" textFill="#80e0f2">
+                            <font>
+                                <Font size="27.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.3803921639919281" green="0.8392156958580017" blue="0.30980393290519714" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <styleClass>
+                        <String fx:value="info-pane-btn" />
+                        <String fx:value="radius" />
+                    </styleClass>
+                </HBox>
+                <HBox layoutY="383.0" prefHeight="50.0" prefWidth="200.0">
+                    <children>
+                        <FontAwesomeIconView fx:id="calendar" glyphName="CALENDAR" size="40" wrappingWidth="24.0">
+                            <HBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="178.0" text="Calendar" textAlignment="CENTER" textFill="#80e0f2">
+                            <font>
+                                <Font size="27.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.3803921639919281" green="0.8392156958580017" blue="0.30980393290519714" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <styleClass>
+                        <String fx:value="info-pane-btn" />
+                        <String fx:value="radius" />
+                    </styleClass>
+                </HBox>
+                <HBox layoutY="632.0" onMouseClicked="#close" prefHeight="50.0" prefWidth="200.0">
+                    <children>
+                        <FontAwesomeIconView fx:id="exit" glyphName="BACKWARD" size="40" wrappingWidth="24.0">
+                            <HBox.margin>
+                                <Insets left="10.0" top="5.0" />
+                            </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="178.0" text="Close" textAlignment="CENTER" textFill="#80e0f2">
+                            <font>
+                                <Font size="27.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.3803921639919281" green="0.8392156958580017" blue="0.30980393290519714" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <styleClass>
+                        <String fx:value="info-pane-btn" />
+                        <String fx:value="radius" />
+                    </styleClass>
+                </HBox>
+                <Circle fx:id="online" fill="#11f533" layoutX="166.0" layoutY="33.0" opacity="0.05" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Circle>
+            </children>
+        </Pane>
+        <Label layoutX="506.0" layoutY="50.0" text="Chat">
+            <font>
+                <Font name="Bell MT Bold" size="23.0" />
+            </font>
+        </Label>
+        <HBox layoutX="228.0" layoutY="108.0" prefHeight="50.0" prefWidth="260.0" stylesheets="@style.css">
+            <children>
+                <FontAwesomeIconView fx:id="search" glyphName="SEARCH" size="25" wrappingWidth="24.0">
+                    <HBox.margin>
+                        <Insets left="10.0" top="11.0" />
+                    </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </FontAwesomeIconView>
+                <TextField fx:id="searchField" prefHeight="65.0" prefWidth="220.0" styleClass="search-box">
+                    <HBox.margin>
+                        <Insets left="6.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                    <effect>
+                        <Blend opacity="0.0" />
+                    </effect>
+                </TextField>
+            </children>
+        </HBox>
+        <ScrollPane fx:id="scrollPane" layoutX="206.0" layoutY="158.0" prefHeight="564.0" prefWidth="331.0" stylesheets="@style.css">
+            <content>
+                <AnchorPane fx:id="personPane" minHeight="0.0" minWidth="0.0" prefHeight="1200.0" prefWidth="315.0" />
+            </content>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <styleClass>
+                <String fx:value="scroll-bar" />
+                <String fx:value="scroll-pane2" />
+            </styleClass>
+        </ScrollPane>
+        <HBox layoutX="530.0" layoutY="616.0" prefHeight="100.0" prefWidth="413.0" styleClass="icon" stylesheets="@style.css">
+            <children>
+                <TextArea fx:id="textArea1" disable="true" prefHeight="100.0" prefWidth="352.0" promptText="Type Message" styleClass="scroll-pane2" stylesheets="@style.css">
+                    <HBox.margin>
+                        <Insets left="5.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </TextArea>
+                <FontAwesomeIconView fx:id="sendM" fill="#d0d7d9" glyphName="CHECK" layoutX="10.0" layoutY="74.0" onMouseClicked="#sendMessage" size="40" styleClass="icon">
+                    <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="30.0" />
+                    </HBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </FontAwesomeIconView>
+            </children>
+        </HBox>
+        <ScrollPane layoutX="535.0" layoutY="158.0" prefHeight="437.0" prefWidth="389.0" stylesheets="@style.css">
+            <content>
+                <AnchorPane fx:id="messagePane" prefHeight="656.0" prefWidth="373.0">
+                    <children>
+                        <Circle fill="#f8f8f8" layoutX="47.0" layoutY="44.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Circle>
+                        <ImageView fx:id="messageImg" fitHeight="40.0" fitWidth="40.0" layoutX="27.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextArea fx:id="inMessage" editable="false" layoutX="99.0" layoutY="24.0" prefHeight="200.0" prefWidth="260.0" styleClass="scroll-pane2">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextArea>
+                        <TextArea fx:id="outMessage" editable="false" layoutX="24.0" layoutY="250.0" maxWidth="260.0" prefHeight="200.0" prefWidth="260.0" styleClass="scroll-pane2">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextArea>
+                        <Label fx:id="time1" layoutX="92.0" layoutY="7.0" />
+                        <Label fx:id="time2" layoutX="24.0" layoutY="230.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+            <styleClass>
+                <String fx:value="scroll-pane2" />
+                <String fx:value="scroll-bar" />
+            </styleClass>
+        </ScrollPane>
+        <Pane fx:id="topPane" layoutX="200.0" prefHeight="730.0" prefWidth="750.0" visible="false">
+         <children>
+            <Label fx:id="profileLbl" layoutX="327.0" layoutY="112.0" text="Label" />
+         </children></Pane>
+    </children>
+</AnchorPane>
