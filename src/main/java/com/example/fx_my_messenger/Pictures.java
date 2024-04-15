@@ -19,6 +19,7 @@ public class Pictures {
     static Image  pic9 = new Image("https://randomuser.me/api/portraits/men/58.jpg");
     static Image pic10 = new Image("https://randomuser.me/api/portraits/men/93.jpg");
     static Image addAnImage (){
+
         images = new ArrayList<>();
         images.add(pic1);
         images.add(pic2);

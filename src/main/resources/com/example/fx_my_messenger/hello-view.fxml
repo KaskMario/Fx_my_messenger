@@ -253,6 +253,7 @@
         </ScrollPane>
         <Pane fx:id="topPane" layoutX="200.0" prefHeight="730.0" prefWidth="750.0" visible="false">
          <children>
+
             <Label fx:id="profileLbl" layoutX="327.0" layoutY="112.0" text="Label" />
          </children></Pane>
     </children>

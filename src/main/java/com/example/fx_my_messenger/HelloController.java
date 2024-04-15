@@ -285,7 +285,6 @@ public class HelloController implements Initializable{
             System.out.println(e.getMessage());
         }Connect.closeDb();
 
-
     }
     void showDbMessage() {
 

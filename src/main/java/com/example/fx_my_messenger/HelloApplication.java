@@ -22,7 +22,6 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         //stage.initStyle(StageStyle.DECORATED);
         // stage.setY(50);
-        // stage.setX(50);
         //stage.setFullScreen(true);
         // stage.setFullScreenExitHint("No way out..  hahahahahahahaaa");
         //stage.setFullScreenExitKeyCombination(KeyCombination.valueOf("q"));

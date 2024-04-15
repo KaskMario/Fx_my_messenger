@@ -22,6 +22,7 @@ public class Connect {
         return connection;
 
     }
+
     public static void closeDb () {
         if(connection != null) {
             try {
